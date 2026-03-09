@@ -53,6 +53,7 @@ task downloadDependencies(type: Exec) {
         outputDir.mkdirs()
 
         // Download all *.jar dependencies without checksum verification.
+        // Using custom build from pwxiao (full video package)
         def filesToDownload = [
             ["url": "https://github.com/pwxiao/libmpv-android-video-build/releases/download/pwxiao/full-arm64-v8a.jar", "destination": file("$buildDir/v1.1.5/default-arm64-v8a.jar")],
             ["url": "https://github.com/pwxiao/libmpv-android-video-build/releases/download/pwxiao/full-armeabi-v7a.jar", "destination": file("$buildDir/v1.1.5/default-armeabi-v7a.jar")],
